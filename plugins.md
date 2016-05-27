@@ -1,25 +1,39 @@
-# Plugin Checklist
+# Useful Plugin List
 
-- [x] pathogen
+## Plugin Managers
+- pathogen
+- vundle
+- vim-plug
+
+## Set of defaults
+- vim-sensible
 
 ## File/Buffer explorers
-- [x] nerdtree
-- [x] ctrlp
+- nerdtree
+- ctrlp
 
 ## Code snippets
-- [x] emmet
-- [x] snipmate
+- emmet
+- snipmate
+- ultisnips
+- vim-snippets
 
 ## Commands
-- [x] repete
-- [x] matchit
-- [x] surround
-- [x] delimitmate
-- [x] tabular
-- [x] nerd-commenter
+- matchit
+- surround
+- repeat
+- delimitmate
+- tabular
+- nerd-commenter
 
-## Complex plugins (Linters, Autocompletion plugins...)
+## Fancy highlighters
+- vim-indent-guides
+- vim-colorschemes
 
-- [x] neocomplete
-- [x] syntastic
+## Complex plugins (Git Wrappers, Linters, Autocompletion plugins...)
+
+- vim-fugitive
+- neocomplete
+- deoplete (neovim)
+- syntastic
 
