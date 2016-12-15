@@ -1,17 +1,31 @@
-" julie' .vimrc
-
-" Pathogen plugin manager
-call pathogen#infect()
-syntax on
-filetype plugin indent on
+" julie's .vimrc
 
 " recommended defaults
 set nocompatible    " nocompatible with vi
 set hidden          " hidden modified buffers
 
-" encoding
-scriptencoding utf-8
-set encoding=utf-8
+" plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'Raimondi/delimitMate'
+Plug 'godlygeek/tabular'
+Plug 'scrooloose/nerdcommenter'
+Plug 'nathanaelkane/vim-indent-guides' " <leader>ig
+Plug 'lumiliet/vim-twig'
+Plug 'flazz/vim-colorschemes'
+Plug 'mattn/emmet-vim'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'easymotion/vim-easymotion'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/syntastic'
+Plug 'valloric/youcompleteme'
+
+call plug#end()
 
 " remaps
 :imap ;; <Esc>
@@ -20,14 +34,8 @@ set encoding=utf-8
 let g:ctrlp_map = '<leader>p'
 
 " interface
-set title
 set number
 set ruler
-set wrap
-set scrolloff=3
-
-" normal backspace
-set backspace=indent,eol,start
 
 " 4 tab spaces
 set tabstop=4
@@ -47,33 +55,24 @@ set hlsearch
 set visualbell
 set noerrorbells
 
-" syntax
-syntax enable
-set background=light
-colorscheme default
+" colors
+set background=dark
+
+if has("gui_running")
+    colorscheme duotone-darkpool
+else
+    colorscheme Tomorrow-Night
+endif
 
 " md syntax and highlight
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-let g:markdown_fenced_languages = ['php', 'python',  'bash=sh', 'css', 'javascript', 'json=javascript', 'xml', 'html']
+let g:markdown_fenced_languages = ['php', 'python', 'bash=sh', 'css', 'javascript', 'json=javascript', 'xml', 'html']
 
-" NeoComplCache activation and setup
-" Disable AutoComplPop.
-let g:acp_enableAtStartup = 0
-" Use neocomplete.
-let g:neocomplete#enable_at_startup = 1
-" Use smartcase.
-let g:neocomplete#enable_smart_case = 1
-" Set minimum syntax keyword length.
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-" fix omnicomplete behaviour
-set completeopt=longest,menuone
-
-" Syntastic recommended settings
+" Syntastic plugin config
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1

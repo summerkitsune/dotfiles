@@ -1,4 +1,4 @@
-" julie' init.vim for neovim
+" julie's init.vim for neovim
 
 " Plugin manager
 call plug#begin('~/.vim/plugged')
