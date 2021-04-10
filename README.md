@@ -1,24 +1,28 @@
-# Useful Plugin List
+# Vim config files
 
-## Plugin Managers
+The file `.vimrc` is for classic Vim, whereas the file `init.vim` is for Neovim.
+
+## Useful Plugin List
+
+### Plugin Managers
 - pathogen
 - vundle
 - vim-plug
 
-## Set of defaults
+### Set of defaults
 - vim-sensible
 
-## File/Buffer explorers
+### File/Buffer explorers
 - nerdtree
 - ctrlp
 
-## Code snippets
+### Code snippets
 - emmet
 - snipmate
 - ultisnips
 - vim-snippets
 
-## Commands
+### Commands
 - matchit
 - surround
 - repeat
@@ -26,11 +30,11 @@
 - tabular
 - nerd-commenter
 
-## Fancy highlighters
+### Fancy highlighters
 - vim-indent-guides
 - vim-colorschemes
 
-## Complex plugins (Git Wrappers, Linters, Autocompletion plugins...)
+### Complex plugins (Git Wrappers, Linters, Autocompletion plugins...)
 
 - vim-fugitive
 - neocomplete
